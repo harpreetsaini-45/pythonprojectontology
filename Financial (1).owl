@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ex="http://example.org#">
+
+  <!-- Classes -->
+  <rdf:Description rdf:about="http://example.org#Asset">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Asset</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Stock">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Asset"/>
+    <rdfs:label>Stock</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Bond">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Asset"/>
+    <rdfs:label>Bond</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#RealEstate">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Asset"/>
+    <rdfs:label>Real Estate</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Transaction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Transaction</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Purchase">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Transaction"/>
+    <rdfs:label>Purchase</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Sale">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Transaction"/>
+    <rdfs:label>Sale</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#Investor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Investor</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#IndividualInvestor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Investor"/>
+    <rdfs:label>Individual Investor</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org#InstitutionalInvestor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#Investor"/>
+    <rdfs:label>Institutional Investor</rdfs:label>
+  </rdf:Description>
+
+</rdf:RDF>
